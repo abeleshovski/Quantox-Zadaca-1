@@ -1,0 +1,95 @@
+.box {
+  .boxImg {
+    @each $key, $color in $colors {
+      &.#{$key} {
+        background-color: $color;
+      }
+    }
+    height: 23%;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      width: 50px;
+      position: relative;
+      left: calc(100% - 70px);
+      top: -5px;
+      transition: left 0.5s, transform 0.5s;
+    }
+    transition: width 0.5s, height 0.5s, transform 0.5s, background-color 0.5s;
+    transition-timing-function: 0.5s ease-out;
+  }
+  &:hover {
+    .boxImg {
+      height: 26%;
+      background-color: rgba(0, 0, 0, 0);
+      img {
+        left: 40%;
+        transition: left 0.5s, transform 0.5s;
+      }
+      transition: width 0.5s, height 0.5s, transform 0.5s, background-color 0.5s;
+      transition-timing-function: 0.5s ease-out;
+    }
+  }
+  &:hover {
+    span,
+    p {
+      color: #212121;
+    }
+  }
+
+  .boxTitle {
+    width: 100%;
+    @include flex(row, space-between, center);
+    span {
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+  .boxContent {
+    position: relative;
+    top: -6%;
+    background-color: $Dark-blue;
+    padding: 10px;
+    height: 83%;
+    border-radius: 10px;
+    color: #fff;
+    @include flex(column, space-evenly, start);
+    h3 {
+      font-size: 36px;
+    }
+    span {
+      font-size: 14px;
+      color: $Pale-Blue;
+    }
+
+    &:hover {
+      background-color: $Pale-Blue;
+      h3,
+      span {
+        color: #212121;
+      }
+    }
+  }
+  .work {
+    background-color: $Light-red1;
+    /*hover*/
+  }
+
+  .play {
+    background-color: $Soft-blue;
+  }
+
+  .study {
+    background-color: $Light-red2;
+  }
+
+  .exercise {
+    background-color: $Lime-green;
+  }
+  .social {
+    background-color: $Violet;
+  }
+  .self-care {
+    background-color: $Soft-orange;
+  }
+}

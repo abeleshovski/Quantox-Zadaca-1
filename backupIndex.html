@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <!--Header for the user-->
+      <div class="reportCard">
+        <div class="user">
+          <img src="./images/image-jeremy.png" alt="" />
+          <div>
+            <span>Report for</span>
+            <h2>Jeremy Robson</h2>
+          </div>
+        </div>
+        <!--Switch between the day, week and month-->
+        <div class="timeButtons">
+          <p id="dailyBtn" onclick="setDaily()">Daily</p>
+          <p id="weeklyBtn" onclick="setWeekly()">Weekly</p>
+          <p id="monthlyBtn" onclick="setMonthly()">Monthly</p>
+        </div>
+      </div>
+      <!--The table for the time tracking-->
+      <div class="boxContainer">
+        <div class="box">
+          <div class="boxImg work">
+            <img src="./images/icon-work.svg" alt="" />
+          </div>
+          <div class="boxContent">
+            <div class="boxTitle">
+              <p>Work</p>
+              <span>...</span>
+            </div>
+            <h3 id="current0"></h3>
+            <span id="previous0">Previous - 7hrs</span>
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxImg play">
+            <img src="./images/icon-play.svg" alt="" />
+          </div>
+          <div class="boxContent">
+            <div class="boxTitle">
+              <p>Play</p>
+              <span>...</span>
+            </div>
+            <h3 id="current1">1hr</h3>
+            <span id="previous1">Previous - 2hrs</span>
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxImg study">
+            <img src="./images/icon-study.svg" alt="" />
+          </div>
+          <div class="boxContent">
+            <div class="boxTitle">
+              <p>Study</p>
+              <span>...</span>
+            </div>
+            <h3 id="current2">0hrs</h3>
+            <span id="previous2">Previous - 1hr</span>
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxImg exercise">
+            <img src="./images/icon-exercise.svg" alt="" />
+          </div>
+          <div class="boxContent">
+            <div class="boxTitle">
+              <p>Exercise</p>
+              <span>...</span>
+            </div>
+            <h3 id="current3">1hr</h3>
+            <span id="previous3">Previous - 1hr</span>
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxImg social">
+            <img src="./images/icon-social.svg" alt="" />
+          </div>
+          <div class="boxContent">
+            <div class="boxTitle">
+              <p>Social</p>
+              <span>...</span>
+            </div>
+            <h3 id="current4">1hr</h3>
+            <span id="previous4">Previous - 3hrs</span>
+          </div>
+        </div>
+        <div class="box">
+          <div class="boxImg selfCare">
+            <img src="./images/icon-self-care.svg" alt="" />
+          </div>
+          <div class="boxContent">
+            <div class="boxTitle">
+              <p>Self Care</p>
+              <span>...</span>
+            </div>
+            <h3 id="current5">0hrs</h3>
+            <span id="previous5">Previous - 1hr</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="./data.json"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

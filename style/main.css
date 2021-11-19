@@ -1,0 +1,572 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+#fadeIn {
+  -webkit-transition: loadIn 0.5s ease-in-out;
+  transition: loadIn 0.5s ease-in-out;
+}
+
+@-webkit-keyframes loadIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loadIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 18px;
+  background-color: #0f1424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  width: 945px;
+  height: 420px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -webkit-animation: loadIn 0.5s ease-in;
+          animation: loadIn 0.5s ease-in;
+}
+
+.boxContainer {
+  display: -ms-grid;
+  display: grid;
+  min-width: 708px;
+  width: 75%;
+  height: 100%;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.reportCard {
+  height: 100%;
+  width: calc(25% - 20px);
+}
+
+.reportCard .user {
+  height: 70%;
+  z-index: 2;
+  position: relative;
+  background-color: #5847eb;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.reportCard .user img {
+  width: 60px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  -webkit-transition: left 0.5s, width 0.5s, height 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, width 0.5s, height 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, width 0.5s, height 0.5s, transform 0.5s;
+  transition: left 0.5s, width 0.5s, height 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  left: calc(50% - 30px);
+}
+
+.reportCard .user img:hover {
+  width: 170px;
+  left: 40%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: left 0.5s, width 0.5s, height 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, width 0.5s, height 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, width 0.5s, height 0.5s, transform 0.5s;
+  transition: left 0.5s, width 0.5s, height 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.reportCard .user span {
+  font-size: 13px;
+  color: #bdc1ff;
+}
+
+.reportCard .timeButtons {
+  height: 36%;
+  position: relative;
+  top: -6%;
+  background-color: #1c1f4a;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 10px;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.reportCard .timeButtons button {
+  color: #6f76c8;
+  border: none;
+  background: none;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  text-align: left;
+  font-weight: 450;
+}
+
+.reportCard .timeButtons button:hover {
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.reportCard .timeButtons button.active {
+  color: #fff;
+}
+
+.box .boxImg {
+  height: 23%;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, transform 0.5s, background-color 0.5s;
+  transition: width 0.5s, height 0.5s, transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  -webkit-transition-timing-function: 0.5s ease-out;
+          transition-timing-function: 0.5s ease-out;
+}
+
+.box .boxImg.c1 {
+  background-color: #ff8c66;
+}
+
+.box .boxImg.c2 {
+  background-color: #56c2e6;
+}
+
+.box .boxImg.c3 {
+  background-color: #ff5c7c;
+}
+
+.box .boxImg.c4 {
+  background-color: #4acf81;
+}
+
+.box .boxImg.c5 {
+  background-color: #7536d3;
+}
+
+.box .boxImg.c6 {
+  background-color: #f1c65b;
+}
+
+.box .boxImg img {
+  width: 50px;
+  position: relative;
+  left: calc(100% - 70px);
+  top: -5px;
+  -webkit-transition: left 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, transform 0.5s;
+  transition: left 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.box:hover .boxImg {
+  height: 26%;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, transform 0.5s, background-color 0.5s;
+  transition: width 0.5s, height 0.5s, transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  -webkit-transition-timing-function: 0.5s ease-out;
+          transition-timing-function: 0.5s ease-out;
+}
+
+.box:hover .boxImg img {
+  left: 40%;
+  -webkit-transition: left 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, transform 0.5s;
+  transition: left 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.box:hover span,
+.box:hover p {
+  color: #212121;
+}
+
+.box .boxTitle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .boxTitle span {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.box .boxContent {
+  position: relative;
+  top: -6%;
+  background-color: #1c1f4a;
+  padding: 10px;
+  height: 83%;
+  border-radius: 10px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.box .boxContent h3 {
+  font-size: 36px;
+}
+
+.box .boxContent span {
+  font-size: 14px;
+  color: #bdc1ff;
+}
+
+.box .boxContent:hover {
+  background-color: #bdc1ff;
+}
+
+.box .boxContent:hover h3,
+.box .boxContent:hover span {
+  color: #212121;
+}
+
+.box .work {
+  background-color: #ff8c66;
+  /*hover*/
+}
+
+.box .play {
+  background-color: #56c2e6;
+}
+
+.box .study {
+  background-color: #ff5c7c;
+}
+
+.box .exercise {
+  background-color: #4acf81;
+}
+
+.box .social {
+  background-color: #7536d3;
+}
+
+.box .self-care {
+  background-color: #f1c65b;
+}
+
+/* when the screen starts to shrink*/
+@media screen and (max-width: 1023.9px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+  }
+  main .reportCard {
+    width: 445px;
+  }
+  main .user {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  main .timeButtons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: relative;
+    top: -10px;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  main {
+    width: 90%;
+  }
+  .container {
+    height: 100%;
+  }
+  .boxContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    min-width: auto;
+    max-width: 447px;
+    width: 100%;
+  }
+  .boxContainer .box .box-img {
+    height: 55px;
+  }
+  .boxContainer .box .box-content {
+    top: -20px;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 464.9px) {
+  .reportCard {
+    width: 100% !important;
+  }
+  .box {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 515.9px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .profile {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .profile div {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */

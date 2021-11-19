@@ -1,0 +1,69 @@
+/* when the screen starts to shrink*/
+@media screen and (max-width: 1023.9px) {
+  main {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    .reportCard {
+      width: 445px;
+    }
+    .user {
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+    }
+    .timeButtons {
+      flex-direction: row;
+      justify-content: space-around;
+      position: relative;
+      top: -10px;
+      padding-top: 30px;
+    }
+  }
+}
+@media screen and (max-width: 767.9px) {
+  main {
+    width: 90%;
+  }
+  .container {
+    height: 100%;
+  }
+  .boxContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: auto;
+    max-width: 447px;
+    width: 100%;
+    .box {
+      .box-img {
+        height: 55px;
+      }
+      .box-content {
+        top: -20px;
+        gap: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 464.9px) {
+  .reportCard {
+    width: 100% !important;
+  }
+  .box {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 515.9px) {
+  .box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .profile {
+    align-items: center !important;
+    div {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.reportCard {
+  height: 100%;
+  width: calc(25% - 20px);
+  .user {
+    height: 70%;
+    z-index: 2;
+    position: relative;
+    background-color: $Blue;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    @include flex(column, space-around, start);
+    img {
+      width: 60px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      transition: left 0.5s, width 0.5s, height 0.5s, transform 0.5s;
+      left: calc(50% - 30px);
+      &:hover {
+        width: 170px;
+        left: 40%;
+        transform: scale(1.1);
+        transition: left 0.5s, width 0.5s, height 0.5s, transform 0.5s;
+      }
+    }
+    span {
+      font-size: 13px;
+      color: $Pale-Blue;
+    }
+  }
+  .timeButtons {
+    height: 36%;
+    position: relative;
+    top: -6%;
+    background-color: $Dark-blue;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    @include flex(column, end, null);
+    gap: 10px;
+    transition: color 0.5s;
+    button {
+      color: $Desaturated-blue;
+      border: none;
+      background: none;
+      align-items: left;
+      text-align: left;
+      font-weight: 450;
+    }
+    button:hover {
+      cursor: pointer;
+      color: #fff;
+      transition: color 0.5s;
+    }
+    button.active {
+      color: #fff;
+    }
+  }
+}
