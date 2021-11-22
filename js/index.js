@@ -1,4 +1,4 @@
-import { setDaily, setWeekly, setMonthly } from "./views/base.js";
+import { setTime } from "./views/base.js";
 import Box from "./views/Box.js";
 import ReportCard from "./views/ReportCard.js";
 
@@ -23,15 +23,15 @@ const getBoxData = async () => {
 };
 
 const getDaily = () => {
-  setDaily(data);
+  setTime(data, "daily");
 };
 
 const getWeekly = () => {
-  setWeekly(data);
+  setTime(data, "weekly");
 };
 
 const getMonthly = () => {
-  setMonthly(data);
+  setTime(data, "monthly");
 };
 
 //on load event

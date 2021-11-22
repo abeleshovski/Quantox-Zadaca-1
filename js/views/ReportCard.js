@@ -1,4 +1,4 @@
-import { elements } from "./base.js";
+import { elements, addToElements } from "./base.js";
 
 const ReportCard = () => {
   const markup = `<div class="user">
@@ -15,6 +15,21 @@ const ReportCard = () => {
 </div>
 `;
   elements.reportCard.insertAdjacentHTML("beforeend", markup);
+  const el = {
+    daily: {
+      btn: document.querySelector("#dailyBtn"),
+      prev: "Yesterday",
+    },
+    weekly: {
+      btn: document.querySelector("#weeklyBtn"),
+      prev: "Last Week",
+    },
+    monthly: {
+      btn: document.querySelector("#monthlyBtn"),
+      prev: "Last Month",
+    },
+  };
+  addToElements(el);
 };
 
 export default ReportCard;
