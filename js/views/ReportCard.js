@@ -14,8 +14,9 @@ const ReportCard = () => {
   <button id="monthlyBtn">Monthly</button>
 </div>
 `;
+
   elements.reportCard.insertAdjacentHTML("beforeend", markup);
-  const el = {
+  const dates = {
     daily: {
       btn: document.querySelector("#dailyBtn"),
       prev: "Yesterday",
@@ -29,7 +30,7 @@ const ReportCard = () => {
       prev: "Last Month",
     },
   };
-  addToElements(el);
+  addToElements(dates);
 };
 
 export default ReportCard;

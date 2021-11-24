@@ -2,7 +2,6 @@ import { elements } from "./base.js";
 
 const Box = (item, id) => {
   const title = item.title.toLowerCase().replace(/ /g, "-");
-  console.log(id);
   const markup = `
     <div class="box">
     <div class="boxImg ${title}">
