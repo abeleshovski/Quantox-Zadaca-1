@@ -19,7 +19,7 @@ const getRepordCard = async () => {
 };
 
 const getBoxData = async () => {
-  data.map((item, id) => Box(item, id));
+  data.forEach((item, id) => Box(item, id));
 };
 
 const getDaily = () => {

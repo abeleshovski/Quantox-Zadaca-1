@@ -17,10 +17,11 @@ export const setTime = async (data, typeOfTime) => {
   resetColors();
   elements[typeOfTime].btn.style.color = "#fff";
 
-  for (let i = 0; i < data.length; i++) {
-    let current = await document.getElementById(`current${i}`);
-    current.innerHTML = data[i].timeframes[typeOfTime].current + "hr";
-    let previous = await document.getElementById(`previous${i}`);
-    previous.innerHTML = `${elements[typeOfTime].prev}: ${data[i].timeframes[typeOfTime].previous}hrs`;
-  }
+  data.forEach((item, i) => {
+    console.log(item);
+    let current = document.getElementById(`current${i}`);
+    current.innerHTML = item.timeframes[typeOfTime].current + "hr";
+    let previous = document.getElementById(`previous${i}`);
+    previous.innerHTML = `${elements[typeOfTime].prev}: ${item.timeframes[typeOfTime].previous}hrs`;
+  });
 };
